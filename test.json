@@ -1,4 +1,7 @@
 {"entities":[
-    {"location":[2,4],"customer":true}
+    {"location":[2,4],"customer":true},
+    {"location":[10,0],"customer":true},
+    {"location":[-1,-10],"customer":true},
+    {"location":[0,0],"customer":false}
     ]
 }
