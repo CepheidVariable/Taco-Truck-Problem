@@ -6,17 +6,20 @@ class Entity:
         self.location = location
         self.customer = customer
 
-f = open(os.path.join(sys.path[0], './test.json'), "r")
-data = json.load(f)
-
 customers = []
 trucks = []
+
+f = open(os.path.join(sys.path[0], './test.json'), "r")
+data = json.load(f)
 
 for i in data['entities']:
     if i['customer']:
         customers.append(Entity(i['location'],i['customer']))
     else:
         trucks.append(Entity(i['location'],i['customer']))
+
+f.close()
+
 
 # debugging
 for c in customers:
